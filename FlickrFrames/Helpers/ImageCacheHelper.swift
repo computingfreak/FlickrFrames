@@ -51,9 +51,10 @@ extension UIImageView {
                                                     DispatchQueue.main.async {
                                                         ImageCacheHelper.cache(image: image, forURL: imgURL)
                                                         self.image = image
+                                                        
+                                                        onComplete?()
                                                     }
                                                 }
-                                                onComplete?()
         })
         task.resume()
         return task
