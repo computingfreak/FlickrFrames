@@ -13,10 +13,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+     
+        configureInitialViewController()
+        
         return true
+    }
+    
+    func configureInitialViewController() {
+        let imageSearchVC = FFImageSearchVC()
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = imageSearchVC
+        window?.makeKeyAndVisible()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
