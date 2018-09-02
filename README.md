@@ -1,13 +1,13 @@
 
 ## FlickrFrames
 
-**FlickrFrames** is a basic iOS project that fetches images from Flickr and renders them in `UICollectionView`.  The project does not use any third-party libraries and is built using all native components
+**FlickrFrames** is a simple iOS project that fetches images from Flickr and renders them using `UICollectionView`.  The project does not use any third-party libraries and is built using all native components.
 
 ## Features
 
  - Enter text to search for images from Flickr
- - Infinite scrolling with so many images
- - Faster scrolling (uses basic image caching)
+ - Infinite scrolling with lots of images
+ - Faster scrolling (using basic image caching)
 
 ## Screenshots
 
@@ -37,36 +37,26 @@ Since *pictures are worth a thousand words*, attaching here a few images which s
 "/>
 
 #### Image Caching
-Have implemented image caching using `NSCache`.  The cache gets cleared manually when the app receives Memory Warning. Also the cache is cleared by OS when app shuts. Its the behaviors of `NSCache`. `URLCache` is the other option that can also be used if more control is required.
+Image Caching has been implemented using `NSCache`.  The cache gets cleared automatically when the app receives a Memory Warning. Also the cache is cleared by OS when app is killed due to the behavior of `NSCache`. `URLCache` is an altnerate option that can be used if more control is required.
 
 #### Unit tests
-Test cases are written for important functionalities. Below here mentioned are name and description of all cases
-
-	
+Test cases are written for important functionalities. Name and description of all test cases are as follows:
 
 	testImagesFetchSuccessResponseModelDecodingFromMock()
 
 > An offline test to check if success model decoding is working fine. Codable is used to map JSON data to models
 
-		
-
 	testImagesFetchErrorResponseDecodingFromMock()
 
-> An offline test to check if error model decoding is working fine. Codable is used to map JSON data to models
-
-		
+> An offline test to check if error model decoding is working fine. Codable is used to map JSON data to models	
 
 	testImagesLoadFlowFromServer()
 
 > To test the complete image load flow from the server. This helps if any issue with data parsing or zero images or API is down
 
-		
-
 	testSearchImageFlowFromMockedData()
 
 > Test the complete search flow from Mocked data
-
-
 
 	testImageDownloadAndCaching()
 
@@ -86,12 +76,10 @@ Test cases are written for important functionalities. Below here mentioned are n
 
 ## Time estimates
 
-The overall app took me about 13-15 hours including meal breaks :). It seems a bit difficult task to complete in 5 hours considering quality in mind. Unit testing and writing this **ReadMe**  file also contributed to that time. 
-
-
+The overall app took me about 12-16 hours including refreshment breaks :). It seems a bit difficult task to complete in 5 hours considering quality in mind. Unit testing and writing this **ReadMe**  file also contributed to that time. 
 
 ## My Takeaways
 
-- It was an interesting project to implement. A tricky problem I faced was the images in the collection view were flickering when it's scrolled. It was because the cells are reused and some earlier Image load call completes later and updates the image. I had to keep up a reference to the **sessionTask** so that I can cancel if any previous call is running.
-- Have used till now [Kingfisher](https://github.com/onevcat/Kingfisher) for image caching. It was fun to implement a basic version for caching from scratch
+- It was an interesting project to implement. A tricky problem faced was the images in the collection view were flickering when it's being scrolled. It was because the cells are reused and some earlier Image load call completes later and updates the image. I had to keep up a reference to the **sessionTask** so that I can cancel if any previous call is running.
+- Have used [Kingfisher](https://github.com/onevcat/Kingfisher) earlier for image caching. It was fun to implement a basic version for caching from scratch.
 
