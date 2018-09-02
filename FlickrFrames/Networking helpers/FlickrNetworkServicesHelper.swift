@@ -1,5 +1,5 @@
 //
-//  FlickrNetworkServices.swift
+//  FlickrNetworkServiceHelper.swift
 //  FlickrFrames
 //
 //  Created by Vinayak Parmar on 01/09/18.
@@ -12,17 +12,12 @@ fileprivate let kFlickrAPIKey = "3e7cc266ae2b0e0d78e279ce8e361736"
 fileprivate let kFlickrHOST = "api.flickr.com"
 
 protocol FlickrImagesFetchServiceProtocol {
-    func fetchImagesFromServiceFor(searchText: String,
+    func fetchImagesFromService(searchText: String,
                                    page: Int,
                                    onCompletion completionHandler:@escaping ((ServiceResponse<[URL]>) -> ())) -> URLSessionTask?
 }
 
-protocol FlickrImagesDownloadProtocol {
-    func downloadImageFrom(url: URL,
-                           onCompletion completionHandler:((ServiceResponse<[Data]>) -> ())?)
-}
-
-class FlickrNetworkServices: NSObject {
+class FlickrNetworkServiceHelper: NSObject {
     
     private var urlComponents: URLComponents {
         var urlComponents = URLComponents()
@@ -39,19 +34,11 @@ class FlickrNetworkServices: NSObject {
     }
 }
 
-extension FlickrNetworkServices: FlickrImagesDownloadProtocol {
-    func downloadImageFrom(url: URL,
-                           onCompletion completionHandler:((ServiceResponse<[Data]>) -> ())?) {
-        
-
-    }
-}
-
-extension FlickrNetworkServices: FlickrImagesFetchServiceProtocol {
+extension FlickrNetworkServiceHelper: FlickrImagesFetchServiceProtocol {
     
-    @discardableResult func fetchImagesFromServiceFor(searchText: String,
-                                                      page: Int,
-                                                      onCompletion completionHandler:@escaping ((ServiceResponse<[URL]>) -> ())) -> URLSessionTask? {
+    @discardableResult func fetchImagesFromService(searchText: String,
+                                                   page: Int,
+                                                   onCompletion completionHandler:@escaping ((ServiceResponse<[URL]>) -> ())) -> URLSessionTask? {
         var components = imageFetchServiceComponents()
         components.queryItems?.append(contentsOf:[
             URLQueryItem(name: "page", value: String(page)),

@@ -42,8 +42,8 @@ extension FFImageSearchViewModel: FFImageSearchViewModelProtocol {
         sessionTask?.cancel()
         
         let newPageNumber = currentPageNumber + 1
-        sessionTask =  imageFetchService.fetchImagesFromServiceFor(searchText: currentSearchText,
-                                                                   page: newPageNumber) { [unowned self] (response) in
+        sessionTask =  imageFetchService.fetchImagesFromService(searchText: currentSearchText,
+                                                                page: newPageNumber) { [unowned self] (response) in
                                                                     switch response {
                                                                     case .success(let imageURLs):
                                                                         self.currentPageNumber = newPageNumber
@@ -63,10 +63,10 @@ extension FFImageSearchViewModel: FFImageSearchViewModelProtocol {
         
         currentSearchText = searchText
         currentPageNumber = 1
-        sessionTask =  imageFetchService.fetchImagesFromServiceFor(searchText: searchText,
-                                                                   page: currentPageNumber) { [unowned self] (response) in
+        sessionTask =  imageFetchService.fetchImagesFromService(searchText: searchText,
+                                                                page: currentPageNumber) { [unowned self] (response) in
                                                                     switch response {
-
+                                                                        
                                                                     case .success(let imageURLs):
                                                                         self.imageURLs = imageURLs
                                                                         

@@ -8,9 +8,8 @@
 
 import UIKit
 
-class StubImageFetchService: FlickrImagesFetchServiceProtocol {
-    
-    func fetchImagesFromServiceFor(searchText: String,
+class StubImageFetchService: FlickrImagesFetchServiceProtocol {        
+    func fetchImagesFromService(searchText: String,
                                    page: Int,
                                    onCompletion completionHandler: @escaping ((ServiceResponse<[URL]>) -> ())) -> URLSessionTask? {
         switch page {

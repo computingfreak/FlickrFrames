@@ -16,8 +16,8 @@ class FlickrServicesTests: XCTestCase {
     func testImagesLoadFlowFromServer() {
         let expectation = self.expectation(description: "imageFetch")
         
-        let imageFetchService = FlickrNetworkServices()
-        imageFetchService.fetchImagesFromServiceFor(searchText: "buggati",
+        let imageFetchService = FlickrNetworkServiceHelper()
+        imageFetchService.fetchImagesFromService(searchText: "buggati",
                                                     page: 1) { (response) in
                                                         switch response {
                                                         case .success(let urls):

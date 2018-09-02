@@ -19,9 +19,9 @@
 		66C5EA6B213A5D890067FCCA /* FFImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EA69213A5D890067FCCA /* FFImageCollectionViewCell.swift */; };
 		66C5EA6C213A5D890067FCCA /* FFImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66C5EA6A213A5D890067FCCA /* FFImageCollectionViewCell.xib */; };
 		66C5EA6E213A64400067FCCA /* NetworkHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EA6D213A64400067FCCA /* NetworkHelpers.swift */; };
-		66C5EA70213A64530067FCCA /* FlickrNetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EA6F213A64530067FCCA /* FlickrNetworkServices.swift */; };
+		66C5EA70213A64530067FCCA /* FlickrNetworkServicesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EA6F213A64530067FCCA /* FlickrNetworkServicesHelper.swift */; };
 		66C5EA72213A73000067FCCA /* FlickrServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EA71213A73000067FCCA /* FlickrServicesTests.swift */; };
-		66C5EA74213A75DF0067FCCA /* FlickrNetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EA6F213A64530067FCCA /* FlickrNetworkServices.swift */; };
+		66C5EA74213A75DF0067FCCA /* FlickrNetworkServicesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EA6F213A64530067FCCA /* FlickrNetworkServicesHelper.swift */; };
 		66C5EA75213A75E20067FCCA /* NetworkHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EA6D213A64400067FCCA /* NetworkHelpers.swift */; };
 		66C5EA78213A7A8B0067FCCA /* FFImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EA77213A7A8B0067FCCA /* FFImageModel.swift */; };
 		66C5EA79213A7CB40067FCCA /* FFImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C5EA77213A7A8B0067FCCA /* FFImageModel.swift */; };
@@ -40,6 +40,7 @@
 		66D89CA3213B961E006956F7 /* StubImageFetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D89CA2213B961E006956F7 /* StubImageFetchService.swift */; };
 		66D89CA5213B9945006956F7 /* ImageCacheHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D89CA4213B9945006956F7 /* ImageCacheHelper.swift */; };
 		66D89CA6213B9949006956F7 /* ImageCacheHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D89CA4213B9945006956F7 /* ImageCacheHelper.swift */; };
+		66D89CA8213BA91E006956F7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 66D89CA7213BA91E006956F7 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +70,7 @@
 		66C5EA69213A5D890067FCCA /* FFImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		66C5EA6A213A5D890067FCCA /* FFImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FFImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		66C5EA6D213A64400067FCCA /* NetworkHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelpers.swift; sourceTree = "<group>"; };
-		66C5EA6F213A64530067FCCA /* FlickrNetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrNetworkServices.swift; sourceTree = "<group>"; };
+		66C5EA6F213A64530067FCCA /* FlickrNetworkServicesHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrNetworkServicesHelper.swift; sourceTree = "<group>"; };
 		66C5EA71213A73000067FCCA /* FlickrServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrServicesTests.swift; sourceTree = "<group>"; };
 		66C5EA77213A7A8B0067FCCA /* FFImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFImageModel.swift; sourceTree = "<group>"; };
 		66C5EA7A213A7E6C0067FCCA /* FFImagesListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFImagesListModel.swift; sourceTree = "<group>"; };
@@ -80,6 +81,7 @@
 		66D89C9A213AF7AA006956F7 /* FlickrFramesModelDecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrFramesModelDecodingTests.swift; sourceTree = "<group>"; };
 		66D89CA2213B961E006956F7 /* StubImageFetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubImageFetchService.swift; sourceTree = "<group>"; };
 		66D89CA4213B9945006956F7 /* ImageCacheHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheHelper.swift; sourceTree = "<group>"; };
+		66D89CA7213BA91E006956F7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +123,10 @@
 		66C5EA37213A4BCF0067FCCA /* FlickrFrames */ = {
 			isa = PBXGroup;
 			children = (
+				66D89CA7213BA91E006956F7 /* README.md */,
 				66C5EA44213A4BD10067FCCA /* Info.plist */,
 				66C5EA59213A4C410067FCCA /* Module */,
+				66D89CA9213BA9EB006956F7 /* Helpers */,
 				66C5EA76213A7A550067FCCA /* Models */,
 				66C5EA5A213A4C4A0067FCCA /* Common */,
 				66C5EA58213A4C2C0067FCCA /* Networking helpers */,
@@ -145,7 +149,7 @@
 		66C5EA58213A4C2C0067FCCA /* Networking helpers */ = {
 			isa = PBXGroup;
 			children = (
-				66C5EA6F213A64530067FCCA /* FlickrNetworkServices.swift */,
+				66C5EA6F213A64530067FCCA /* FlickrNetworkServicesHelper.swift */,
 				66C5EA6D213A64400067FCCA /* NetworkHelpers.swift */,
 			);
 			path = "Networking helpers";
@@ -165,8 +169,6 @@
 				66C5EA38213A4BCF0067FCCA /* AppDelegate.swift */,
 				66C5EA3F213A4BD10067FCCA /* Assets.xcassets */,
 				66C5EA41213A4BD10067FCCA /* LaunchScreen.storyboard */,
-				66C5EA66213A572C0067FCCA /* Helpers.swift */,
-				66D89CA4213B9945006956F7 /* ImageCacheHelper.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -203,6 +205,15 @@
 				66C5EA7C213A7F080067FCCA /* FFImageServiceResponseWrapper.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		66D89CA9213BA9EB006956F7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				66C5EA66213A572C0067FCCA /* Helpers.swift */,
+				66D89CA4213B9945006956F7 /* ImageCacheHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +300,7 @@
 				66C5EA85213AB6C20067FCCA /* FFLoadmoreCollectionViewCell.xib in Resources */,
 				66C5EA6C213A5D890067FCCA /* FFImageCollectionViewCell.xib in Resources */,
 				66C5EA65213A4EA60067FCCA /* FFImagesCollectionView.xib in Resources */,
+				66D89CA8213BA91E006956F7 /* README.md in Resources */,
 				66C5EA43213A4BD10067FCCA /* LaunchScreen.storyboard in Resources */,
 				66C5EA40213A4BD10067FCCA /* Assets.xcassets in Resources */,
 				66C5EA5E213A4C920067FCCA /* FFImageSearchVC.xib in Resources */,
@@ -319,7 +331,7 @@
 				66C5EA5D213A4C920067FCCA /* FFImageSearchVC.swift in Sources */,
 				66C5EA61213A4D670067FCCA /* FFImageSearchViewModel.swift in Sources */,
 				66C5EA39213A4BCF0067FCCA /* AppDelegate.swift in Sources */,
-				66C5EA70213A64530067FCCA /* FlickrNetworkServices.swift in Sources */,
+				66C5EA70213A64530067FCCA /* FlickrNetworkServicesHelper.swift in Sources */,
 				66C5EA7D213A7F080067FCCA /* FFImageServiceResponseWrapper.swift in Sources */,
 				66C5EA78213A7A8B0067FCCA /* FFImageModel.swift in Sources */,
 			);
@@ -339,7 +351,7 @@
 				66C5EA72213A73000067FCCA /* FlickrServicesTests.swift in Sources */,
 				66D89C99213AF202006956F7 /* Helpers.swift in Sources */,
 				66D89C9D213B0C76006956F7 /* FFLoadmoreCollectionViewCell.swift in Sources */,
-				66C5EA74213A75DF0067FCCA /* FlickrNetworkServices.swift in Sources */,
+				66C5EA74213A75DF0067FCCA /* FlickrNetworkServicesHelper.swift in Sources */,
 				66C5EA79213A7CB40067FCCA /* FFImageModel.swift in Sources */,
 				66D89C9C213B04FF006956F7 /* FFImageSearchViewModel.swift in Sources */,
 				66C5EA81213A91890067FCCA /* TestingUtils.swift in Sources */,
