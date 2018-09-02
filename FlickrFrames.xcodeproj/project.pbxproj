@@ -40,7 +40,6 @@
 		66D89CA3213B961E006956F7 /* StubImageFetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D89CA2213B961E006956F7 /* StubImageFetchService.swift */; };
 		66D89CA5213B9945006956F7 /* ImageCacheHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D89CA4213B9945006956F7 /* ImageCacheHelper.swift */; };
 		66D89CA6213B9949006956F7 /* ImageCacheHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D89CA4213B9945006956F7 /* ImageCacheHelper.swift */; };
-		66D89CA8213BA91E006956F7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 66D89CA7213BA91E006956F7 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +80,6 @@
 		66D89C9A213AF7AA006956F7 /* FlickrFramesModelDecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrFramesModelDecodingTests.swift; sourceTree = "<group>"; };
 		66D89CA2213B961E006956F7 /* StubImageFetchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubImageFetchService.swift; sourceTree = "<group>"; };
 		66D89CA4213B9945006956F7 /* ImageCacheHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheHelper.swift; sourceTree = "<group>"; };
-		66D89CA7213BA91E006956F7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +121,6 @@
 		66C5EA37213A4BCF0067FCCA /* FlickrFrames */ = {
 			isa = PBXGroup;
 			children = (
-				66D89CA7213BA91E006956F7 /* README.md */,
 				66C5EA44213A4BD10067FCCA /* Info.plist */,
 				66C5EA59213A4C410067FCCA /* Module */,
 				66D89CA9213BA9EB006956F7 /* Helpers */,
@@ -300,7 +297,6 @@
 				66C5EA85213AB6C20067FCCA /* FFLoadmoreCollectionViewCell.xib in Resources */,
 				66C5EA6C213A5D890067FCCA /* FFImageCollectionViewCell.xib in Resources */,
 				66C5EA65213A4EA60067FCCA /* FFImagesCollectionView.xib in Resources */,
-				66D89CA8213BA91E006956F7 /* README.md in Resources */,
 				66C5EA43213A4BD10067FCCA /* LaunchScreen.storyboard in Resources */,
 				66C5EA40213A4BD10067FCCA /* Assets.xcassets in Resources */,
 				66C5EA5E213A4C920067FCCA /* FFImageSearchVC.xib in Resources */,
