@@ -21,7 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func configureInitialViewController() {
-        let imageSearchVC = FFImageSearchVC()
+        // Injecting dependencies
+        let imageFetchService = FlickrNetworkServiceHelper()
+        let viewModel = FFImageSearchViewModel(imageFetchService: imageFetchService)
+        let imageSearchVC = FFImageSearchVC(viewModel: viewModel)
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = imageSearchVC

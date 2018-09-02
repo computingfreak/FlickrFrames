@@ -21,13 +21,20 @@ class FFImageSearchVC: UIViewController {
     // MARK: Variables
     var viewModel: FFImageSearchViewModel!
     
+    init(viewModel: FFImageSearchViewModel) {
+        self.viewModel = viewModel
+        
+        super.init(nibName: nil, bundle: nil) // Invoking the view lifecycle
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
      
-        let flickrNetworkServices = FlickrNetworkServices()
-        viewModel = FFImageSearchViewModel(imageFetchService: flickrNetworkServices)
-        
         customCollectionView.collectionView.dataSource = viewModel
         customCollectionView.collectionView.delegate = self
         customCollectionView.switchStateTo(newState: .initial)
