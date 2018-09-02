@@ -117,6 +117,12 @@ extension FFImageSearchVC: UICollectionViewDelegate {
             }
         }
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if searchBar.isFirstResponder {
+            searchBar.resignFirstResponder()
+        }
+    }
 }
 
 // MARK: UICollectionViewDelegateFlowLayout
