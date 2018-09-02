@@ -73,6 +73,22 @@ class FlickrServicesTests: XCTestCase {
     // TEST FROM LIVE DATA
     // Testing image download and caching
     func testImageDownloadAndCaching() {
+        let downloadURL = "https://farm2.staticflickr.com/1862/30521959238_86521be3fe.jpg"
         
+        let expectation = self.expectation(description: "ImageLoad")
+        
+        if let downloadURL = URL.init(string: downloadURL) {
+            let imgView = UIImageView()
+            _ = imgView.loadImageUsingCacheWith(imgURL: downloadURL,
+                                                onComplete: {
+                                                    XCTAssertNotNil(ImageCacheHelper.checkIfImageFoundFor(url: downloadURL),
+                                                                    "Image not cached.")
+                                                    expectation.fulfill()
+            })
+            
+            wait(for: [expectation], timeout: 5.0)
+        } else {
+            XCTFail("Invalid URL")
+        }
     }
 }

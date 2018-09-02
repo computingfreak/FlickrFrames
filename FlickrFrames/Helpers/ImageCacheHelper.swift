@@ -29,12 +29,14 @@ class ImageCacheHelper: NSObject {
 }
 
 extension UIImageView {
-    func loadImageUsingCacheWith(imgURL: URL) -> URLSessionTask? {
+    func loadImageUsingCacheWith(imgURL: URL,
+                                 onComplete:(() -> ())? = nil) -> URLSessionTask? {
         self.image = nil
         
         // check cached image
         if let cachedImage = ImageCacheHelper.checkIfImageFoundFor(url: imgURL) {
             self.image = cachedImage
+            onComplete?()
             return nil
         }
         
@@ -51,6 +53,7 @@ extension UIImageView {
                                                         self.image = image
                                                     }
                                                 }
+                                                onComplete?()
         })
         task.resume()
         return task
