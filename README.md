@@ -39,19 +39,16 @@ Since *pictures are worth a thousand words*, attaching here a few images which s
 
 
 
-#### MVVM
-
-<img src="https://github.com/vinayakparmar92/FlickrFrames/blob/master/FlickrFrames%20iOS%20Project%20Class%20Sequence%20Diagram%20(1).png" alt="Class sequence showing communication between classses"/>
-
-
-
-#### Networking and Service
+### MVVM
+Class sequence showing communication between classses
+<img src="https://github.com/vinayakparmar92/FlickrFrames/blob/master/FlickrFrames%20iOS%20Project%20Class%20Sequence%20Diagram%20(1).png"/>
 
 
+### Networking and Service
+<img src="https://github.com/vinayakparmar92/FlickrFrames/blob/master/Network%20layer.png"/>
 
 
-
-#### Image Caching
+### Image Caching
 
 Have implemented image caching using **NSCache**.  The cache gets cleared manually when the app receives Memory Warning. Also the cache is cleared by OS when app shuts. Its the behaviors of NSCache. **URLCache**
 
@@ -59,7 +56,7 @@ is the other option that can also be used if more control is required.
 
 
 
-#### Unit tests
+### Unit tests
 
 Test cases are written for major functionalities. Below here mentioned are name and description of all cases
 
